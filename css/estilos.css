@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
+
+body {
+    background-color: rgb(8, 141, 48);
+}
+
+/*HTML*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+}
+
+  * {
+    font-family: "Roboto", sans-serif;
+    color: black;
+}
+
+footer{
+    height: 100px;
+}
+
+/*MAIN*/
+main {
+    min-height: 100vh; 
+    height: auto; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+}
+#prestamoForm{
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: 0 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.datos{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 5px;
+    
+}

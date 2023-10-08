@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestamos Online</title>
+        <!--BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"                       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/e5ccbcb6f6.js" crossorigin="anonymous"></script>
+        <!--Estilos-->
+        <link rel="stylesheet" href="./css/estilos.css">
+        <!-- SweetAlert2 CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/toastify@1.11.3/dist/toastify.min.js"></script>
+
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="h1">
+            <h1>Simulador de Prestamos</h1>
+        </div>
+        <div class="formulario">
+            <form id="prestamoForm">
+                <div class="datos">
+                    <input type="text" required name="name" id="nombre" placeholder="Ingresa tu nombre."/>
+                </div>
+                <div class="datos">
+                    <input type="text" required name="apellido" id="apellido" placeholder="Ingresa tu apellido."/>
+                </div>
+                <div class="datos">
+                    <input type="text" required name="dni" id="dni" placeholder="Ingresa tu DNI.">
+                </div>
+                <div class="datos">
+                    <button type="button" id="btnRegistrar">REGISTRAR</button>
+                </div>
+                <div class="datos">
+                    <input type="number" required name="number" id="monto" placeholder="Ingresá el monto">
+                </div>
+                
+                <div class="datos">
+                    <input type="number" placeholder="Plazo a pagar (en meses)" required name="number" id="plazo">
+                </div>
+                
+                <div class="datos">
+                    <button type="button" id="btnCalcular">CALCULAR</button>
+                </div>
+                <div id="pedirDNI" class="datos">
+                    <button type="button" id="btnPedir">PEDIR</button>
+                </div>
+            </form>
+        </div>
+            <div>
+                <label for="dniConsulta">Consultar Préstamo por DNI</label>
+                <input type="text" required name="dni" id="dniConsulta" placeholder="DNI" name="dniConsulta">
+            </div>
+            <div>
+                <button type="button" id="btnConsultar">CONSULTAR</button>
+            </div>
+            <div id="resultado">
+                <table id="tablaResultado" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Mes</th>
+                            <th>Cuota</th>
+                            <th>Interés</th>
+                            <th>Amortización</th>
+                            <th>Saldo Pendiente</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultadoBody">
+                    </tbody>
+                </table>
+                <div id="resultadoConsulta">
+                    <table id="tablaResultadoConsulta" style="display: none;">
+                        <thead>
+                            <tr>
+                                <th>Mes</th>
+                                <th>Cuota</th>
+                                <th>Interés</th>
+                                <th>Amortización</th>
+                                <th>Saldo Pendiente</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultadoBodyConsulta">
+                        </tbody>
+                    </table>
+                </div>
+            <div id="volverSimulador" style="display: none;">
+                <button type="button" id="btnVolver">Volver al Simulador</button>
+            </div>
+
+            <div id="conversorDivisas">
+                <h2>Conversor de Divisas</h2>
+                <form>
+                    <input type="number" id="cantidad" placeholder="Cantidad" required>
+                    <select id="deDivisa">
+                        <option value="EUR">Euro</option>
+                        <option value="USD">Dolar</option>
+                    </select>
+                    <select id="aDivisa">
+                        <option value="EUR">Euro</option>
+                        <option value="USD">Dolar</option>
+                    </select>
+                    <button type="button" onclick="convertirDivisas()">Convertir</button>
+                </form>
+            </div>
+            <div id="resultadoConversion"></div>
+            
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/preentrega3.js"></script>
+</body>
+</html>
